@@ -1,0 +1,42 @@
+﻿@model HelpDesk.Mvc.ViewModels.DashboardViewModel
+
+@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<h2>Help Desk Dashboard</h2>
+
+<div class="row">
+
+    <div class="col-md-4">
+        <div class="card text-white bg-primary mb-3">
+            <div class="card-body text-center">
+                <h4>Total Tickets</h4>
+                <h2>@Model.TotalTickets</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card text-dark bg-warning mb-3">
+            <div class="card-body text-center">
+                <h4>Open Tickets</h4>
+                <h2>@Model.OpenTickets</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card text-white bg-success mb-3">
+            <div class="card-body text-center">
+                <h4>Closed Tickets</h4>
+                <h2>@Model.ClosedTickets</h2>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<a asp-action="Index" class="btn btn-primary">
+    View All Tickets
+</a>
